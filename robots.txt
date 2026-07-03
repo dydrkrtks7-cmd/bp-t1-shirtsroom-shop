@@ -13,4 +13,4 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-Sitemap: https://shirtsroom.shop/sitemap.xml
+Sitemap: https://maphoshirts.today/sitemap.xml
