@@ -1,20 +1,512 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>셔츠룸 예약 자주 묻는 질문(FAQ) | 예약 전 필수 체크리스트</title>
- <meta name="description" content="셔츠룸 예약 시 궁금해하시는 핵심 질문들을 모았습니다. 인원 구성에 따른 최적의 룸 크기 선택부터, 주말 사전 예약의 중요성, 당일 방문 시의 주의사항까지 실무적인 답변을 확인하세요.">
- <meta name="keywords" content="셔츠룸 예약, 셔츠룸 FAQ, 모임 예약 가이드, 룸 선택 기준, 셔츠룸 이용 안내">
- <link rel="canonical" href="https://maphoshirts.today/faq.html">
- <meta property="og:url" content="https://maphoshirts.today/faq.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>셔츠룸 예약 자주 묻는 질문(FAQ) | 예약 전 필수 체크리스트</title>
+  <meta name="description" content="셔츠룸 예약 시 궁금해하시는 핵심 질문들을 모았습니다. 인원 구성에 따른 최적의 룸 크기 선택부터, 주말 사전 예약의 중요성, 당일 방문 시의 주의사항까지 실무적인 답변을 확인하세요.">
+  <link rel="canonical" href="https://maphoshirts.today/faq.html">
+  <meta property="og:url" content="https://maphoshirts.today/faq.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ background-color: #111111;
+ color: #ffff00;
+ font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+ line-height: 1.4;
+ overflow-x: hidden;
+ min-height: 100vh;
+ }
+
+ /* BRUTALIST CORE */
+ h1, h2, h3, h4 {
+ font-family: Impact, 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ font-weight: 900;
+ }
+
+ h1 {
+ font-size: clamp(3.2rem, 12vw, 6rem);
+ line-height: 0.85;
+ color: #ffff00;
+ text-shadow: 6px 6px 0 #00ff41;
+ transform: rotate(-2deg);
+ margin: 0 -10px;
+ }
+
+ h2 {
+ font-size: clamp(2.4rem, 8vw, 4rem);
+ color: #ffff00;
+ border-bottom: 6px solid #00ff41;
+ display: inline-block;
+ padding-bottom: 8px;
+ transform: skewX(-8deg);
+ }
+
+ h3 {
+ font-size: 1.8rem;
+ color: #00ff41;
+ }
+
+ p, li, a, span, div {
+ font-family: 'Courier New', Courier, monospace;
+ }
+
+ a {
+ color: #00ff41;
+ text-decoration: underline;
+ text-decoration-thickness: 3px;
+ text-underline-offset: 6px;
+ }
+ a:hover {
+ color: #ffff00;
+ background: #111111;
+ }
+
+ img, svg, emoji {
+ display: block;
+ }
+
+ /* LAYOUT - FULL BLEED, ASYMMETRIC */
+ .container {
+ max-width: none;
+ padding: 0 48px;
+ }
+
+ header {
+ padding: 48px 48px 24px;
+ border-bottom: 6px solid #00ff41;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 24px;
+ position: relative;
+ }
+
+ .logo {
+ font-size: 2.2rem;
+ font-weight: 900;
+ color: #ffff00;
+ background: #00ff41;
+ padding: 8px 24px;
+ transform: rotate(1deg);
+ display: inline-block;
+ border: 4px solid #ffff00;
+ }
+
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 32px;
+ font-size: 1.2rem;
+ text-transform: uppercase;
+ }
+
+ nav a {
+ color: #ffff00;
+ text-decoration: none;
+ border: 3px solid #ffff00;
+ padding: 8px 16px;
+ background: #111111;
+ transition: 0.1s linear;
+ display: inline-block;
+ }
+ nav a:hover {
+ background: #00ff41;
+ color: #111111;
+ border-color: #00ff41;
+ transform: scale(1.02);
+ }
+
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 6px;
+ cursor: pointer;
+ border: 3px solid #ffff00;
+ padding: 12px;
+ background: #111111;
+ }
+ .hamburger span {
+ width: 32px;
+ height: 4px;
+ background: #ffff00;
+ display: block;
+ }
+
+ /* HERO */
+ .hero {
+ padding: 80px 48px;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 32px;
+ align-items: center;
+ border-bottom: 6px solid #00ff41;
+ position: relative;
+ background: repeating-linear-gradient(
+ 45deg,
+ #111111 0px, #111111 20px,
+ #0a0a0a 20px, #0a0a0a 40px
+ );
+ }
+
+ .hero-visual {
+ background: #ffff00;
+ border: 8px solid #00ff41;
+ padding: 40px;
+ min-height: 300px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transform: rotate(2deg) skewX(-3deg);
+ position: relative;
+ overflow: hidden;
+ }
+
+ .hero-visual::before {
+ content: "셔츠룸";
+ font-size: 5rem;
+ font-weight: 900;
+ color: #111111;
+ opacity: 0.15;
+ position: absolute;
+ top: -20px;
+ right: -20px;
+ transform: rotate(15deg);
+ font-family: Impact, sans-serif;
+ }
+
+ .hero-visual .big-emoji {
+ font-size: 8rem;
+ filter: drop-shadow(8px 8px 0 #00ff41);
+ }
+
+ .hero-content {
+ transform: rotate(-1deg);
+ }
+
+ .hero-content .subhead {
+ font-size: 1.6rem;
+ color: #00ff41;
+ border-left: 8px solid #ffff00;
+ padding-left: 24px;
+ margin: 24px 0 32px;
+ text-transform: uppercase;
+ }
+
+ .btn-primary {
+ display: inline-block;
+ background: #00ff41;
+ color: #111111;
+ font-weight: 900;
+ font-size: 1.8rem;
+ padding: 16px 48px;
+ border: 6px solid #ffff00;
+ text-decoration: none;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ transform: skewX(-5deg);
+ transition: 0.1s linear;
+ font-family: Impact, sans-serif;
+ }
+ .btn-primary:hover {
+ background: #ffff00;
+ border-color: #00ff41;
+ transform: skewX(2deg) scale(1.02);
+ }
+
+ /* SECTIONS */
+ section {
+ padding: 80px 48px;
+ border-bottom: 6px solid #00ff41;
+ position: relative;
+ }
+
+ .section-title {
+ margin-bottom: 48px;
+ transform: rotate(-1deg);
+ }
+
+ /* VALUE PROPS */
+ .value-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 32px;
+ margin-top: 32px;
+ }
+
+ .value-card {
+ border: 6px solid #ffff00;
+ padding: 32px;
+ background: #111111;
+ transform: rotate(var(--rot, 0deg));
+ position: relative;
+ }
+ .value-card:nth-child(1) { --rot: 1deg; }
+ .value-card:nth-child(2) { --rot: -2deg; }
+ .value-card:nth-child(3) { --rot: 2deg; }
+
+ .value-card h3 {
+ font-size: 2rem;
+ margin-bottom: 16px;
+ color: #00ff41;
+ border-bottom: 4px solid #ffff00;
+ padding-bottom: 8px;
+ }
+
+ .value-card .icon-big {
+ font-size: 4rem;
+ margin-bottom: 16px;
+ }
+
+ /* REVIEWS */
+ .review-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+ gap: 32px;
+ }
+
+ .review-card {
+ border: 6px solid #ffff00;
+ padding: 32px;
+ background: #111111;
+ transform: rotate(var(--r, 0deg));
+ position: relative;
+ }
+ .review-card:nth-child(1) { --r: -1deg; }
+ .review-card:nth-child(2) { --r: 2deg; }
+ .review-card:nth-child(3) { --r: -2deg; }
+ .review-card:nth-child(4) { --r: 1deg; }
+ .review-card:nth-child(5) { --r: -1deg; }
+
+ .review-card .stars {
+ color: #ffff00;
+ font-size: 1.8rem;
+ letter-spacing: 4px;
+ }
+ .review-card .meta {
+ display: flex;
+ justify-content: space-between;
+ margin: 16px 0;
+ color: #00ff41;
+ font-size: 1rem;
+ border-top: 3px solid #ffff00;
+ border-bottom: 3px solid #ffff00;
+ padding: 8px 0;
+ }
+ .review-card .nick {
+ font-weight: 900;
+ color: #ffff00;
+ }
+ .review-card .date {
+ color: #00ff41;
+ }
+ .review-card .text {
+ font-size: 1.1rem;
+ color: #ffff00;
+ line-height: 1.5;
+ margin-top: 8px;
+ }
+
+ /* ASYMMETRIC BLOCK */
+ .asymmetric-block {
+ display: grid;
+ grid-template-columns: 1fr 2fr;
+ gap: 32px;
+ align-items: center;
+ }
+
+ .asymmetric-block .block-visual {
+ background: #00ff41;
+ border: 8px solid #ffff00;
+ padding: 48px 24px;
+ text-align: center;
+ transform: rotate(-3deg);
+ }
+
+ .asymmetric-block .block-text {
+ transform: rotate(1deg);
+ }
+ .asymmetric-block .block-text h2 {
+ border: none;
+ transform: none;
+ }
+
+ /* OVERLAPPING SECTION */
+ .overlap-section {
+ margin-top: -40px;
+ padding-top: 120px;
+ background: #111111;
+ border: 6px solid #ffff00;
+ border-top: none;
+ }
+
+ /* PHONE */
+ .phone-block {
+ text-align: center;
+ padding: 48px;
+ border: 8px solid #00ff41;
+ background: #111111;
+ transform: rotate(1deg);
+ margin: 48px 0;
+ }
+ .phone-block a {
+ font-size: 3rem;
+ font-weight: 900;
+ color: #ffff00;
+ text-decoration: none;
+ border: 6px solid #00ff41;
+ padding: 16px 48px;
+ display: inline-block;
+ background: #111111;
+ font-family: Impact, sans-serif;
+ letter-spacing: 4px;
+ }
+ .phone-block a:hover {
+ background: #00ff41;
+ color: #111111;
+ }
+
+ /* FOOTER */
+ footer {
+ padding: 48px;
+ border-top: 6px solid #00ff41;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: 24px;
+ background: #0a0a0a;
+ }
+ footer .copy {
+ color: #00ff41;
+ font-size: 1rem;
+ }
+ footer .links {
+ display: flex;
+ gap: 32px;
+ }
+
+ /* RESPONSIVE */
+ @media (max-width: 768px) {
+ .container, header, section, .hero, footer {
+ padding-left: 24px;
+ padding-right: 24px;
+ }
+ header {
+ padding-top: 24px;
+ padding-bottom: 16px;
+ }
+ .hero {
+ grid-template-columns: 1fr;
+ padding: 48px 24px;
+ }
+ .hero-visual {
+ min-height: 200px;
+ padding: 24px;
+ }
+ .hero-visual .big-emoji {
+ font-size: 5rem;
+ }
+ .value-grid {
+ grid-template-columns: 1fr;
+ }
+ .asymmetric-block {
+ grid-template-columns: 1fr;
+ }
+ .asymmetric-block .block-visual {
+ transform: rotate(0deg);
+ }
+ .review-grid {
+ grid-template-columns: 1fr;
+ }
+ h1 {
+ font-size: 2.8rem;
+ }
+ .phone-block a {
+ font-size: 2rem;
+ padding: 12px 24px;
+ }
+
+ nav ul {
+ display: none;
+ flex-direction: column;
+ width: 100%;
+ gap: 12px;
+ margin-top: 16px;
+ }
+ nav ul.active {
+ display: flex;
+ }
+ .hamburger {
+ display: flex;
+ }
+ }
+
+ /* UTILITIES */
+ .text-accent {
+ color: #00ff41;
+ }
+ .text-secondary {
+ color: #ffff00;
+ }
+ .border-accent {
+ border-color: #00ff41;
+ }
+ .bg-accent {
+ background: #00ff41;
+ }
+ .skew {
+ transform: skewX(-4deg);
+ }
+ .mt-32 { margin-top: 32px; }
+ .mb-32 { margin-bottom: 32px; }
+ .gap-32 { gap: 32px; }
+ .full-bleed {
+ width: 100vw;
+ margin-left: calc(-50vw + 50%);
+ }
+ .negative-margin {
+ margin-left: -48px;
+ margin-right: -48px;
+ }
+ @media (max-width:768px) {
+ .negative-margin {
+ margin-left: -24px;
+ margin-right: -24px;
+ }
+ }
+ </style>
   <meta property="og:title" content="셔츠룸 예약 자주 묻는 질문(FAQ) | 예약 전 필수 체크리스트">
   <meta property="og:description" content="셔츠룸 예약 시 궁금해하시는 핵심 질문들을 모았습니다. 인원 구성에 따른 최적의 룸 크기 선택부터, 주말 사전 예약의 중요성, 당일 방문 시의 주의사항까지 실무적인 답변을 확인하세요.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
- <header>
+  <div class="container">
+    <header>
+ <div class="logo">셔츠룸</div>
+ <nav>
+ 
+ <ul id="nav-list">
+ <li><a href="#">홈</a></li>
+ <li><a href="#">예약</a></li>
+ <li><a href="#">시스템</a></li>
+ <li><a href="#">리뷰</a></li>
+ 
+ </ul>
+ <a href="posts.html">글 목록</a></nav>
+</header>
+    <main>
+<header>
  <nav>
  <a href="/">홈</a>
  <a href="/guide">가이드</a>
@@ -56,5 +548,7 @@
  <footer class="m-foot-jodv">
  <p>© 2024 셔츠룸 예약 가이드. 모든 정보는 참고용이며 상세 내용은 매장에 직접 문의하시기 바랍니다.</p>
  </footer>
+    </main>
+  </div>
 </body>
 </html>

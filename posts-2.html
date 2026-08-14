@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/3) · t1-shirtsroom-shop</title>
+  <meta name="description" content="t1-shirtsroom-shop에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://maphoshirts.today/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: 'Helvetica Neue', Arial, sans-serif;
+ background: #1a1a1a;
+ color: #e0e0e0;
+ line-height: 1.6;
+ }
+ h1, h2, h3, h4 {
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color: #f4d03f;
+ }
+ h1 {
+ font-size: 3.5rem;
+ margin-bottom: 1rem;
+ text-shadow: 4px 4px 0 #000;
+ }
+ h2 {
+ font-size: 2.5rem;
+ margin-bottom: 1.5rem;
+ border-left: 8px solid #f4d03f;
+ padding-left: 1rem;
+ }
+ h3 {
+ font-size: 1.8rem;
+ margin-bottom: 1rem;
+ }
+ p, li, a, span, div {
+ font-size: 1.1rem;
+ font-weight: 400;
+ }
+ a {
+ color: #f4d03f;
+ text-decoration: none;
+ font-weight: 700;
+ border-bottom: 2px solid transparent;
+ transition: all 0.2s;
+ }
+ a:hover {
+ border-bottom-color: #f4d03f;
+ color: #fff;
+ }
+ img, svg, emoji {
+ max-width: 100%;
+ height: auto;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 2rem;
+ }
+ header {
+ background: #111;
+ padding: 1.5rem 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: 4px solid #f4d03f;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ }
+ .logo {
+ font-size: 2rem;
+ font-weight: 900;
+ color: #f4d03f;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ }
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 2rem;
+ }
+ nav a {
+ font-size: 1.1rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ padding: 0.5rem 0;
+ }
+ .hamburger-menu {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 5px;
+ }
+ .hamburger-menu span {
+ width: 30px;
+ height: 4px;
+ background: #f4d03f;
+ border-radius: 2px;
+ }
+ @media (max-width: 768px) {
+ .hamburger-menu {
+ display: flex;
+ }
+ nav ul {
+ display: none;
+ flex-direction: column;
+ background: #111;
+ position: absolute;
+ top: 80px;
+ right: 2rem;
+ padding: 1.5rem;
+ border: 2px solid #f4d03f;
+ gap: 1rem;
+ }
+ nav ul.active {
+ display: flex;
+ }
+ h1 {
+ font-size: 2.5rem;
+ }
+ h2 {
+ font-size: 1.8rem;
+ }
+ }
+ .tel-link {
+ display: inline-block;
+ background: #f4d03f;
+ color: #111;
+ padding: 0.8rem 2rem;
+ font-weight: 900;
+ font-size: 1.3rem;
+ border: none;
+ cursor: pointer;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ transition: all 0.2s;
+ }
+ .tel-link:hover {
+ background: #fff;
+ color: #111;
+ border-bottom: none;
+ }
+ .hero {
+ background: linear-gradient(135deg, #111, #2a2a2a);
+ padding: 4rem 2rem;
+ text-align: center;
+ border-bottom: 4px solid #f4d03f;
+ }
+ .hero p {
+ font-size: 1.4rem;
+ max-width: 800px;
+ margin: 0 auto 2rem;
+ }
+ .card-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+ margin: 3rem 0;
+ }
+ .card {
+ background: #222;
+ padding: 2rem;
+ border: 2px solid #333;
+ transition: all 0.3s;
+ }
+ .card:hover {
+ border-color: #f4d03f;
+ transform: translateY(-5px);
+ }
+ .card h3 {
+ color: #f4d03f;
+ }
+ .quote-block {
+ background: #111;
+ padding: 3rem;
+ border-left: 8px solid #f4d03f;
+ margin: 3rem 0;
+ font-style: italic;
+ font-size: 1.3rem;
+ }
+ .stats {
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+ gap: 2rem;
+ margin: 3rem 0;
+ }
+ .stat-item {
+ text-align: center;
+ }
+ .stat-number {
+ font-size: 3rem;
+ font-weight: 900;
+ color: #f4d03f;
+ }
+ .stat-label {
+ font-size: 1rem;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ }
+ footer {
+ background: #111;
+ padding: 2rem;
+ text-align: center;
+ border-top: 4px solid #f4d03f;
+ margin-top: 3rem;
+ }
+ footer p {
+ font-size: 0.9rem;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/3) · t1-shirtsroom-shop">
+  <meta property="og:description" content="t1-shirtsroom-shop에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://maphoshirts.today/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="logo">셔츠룸 예약</div>
+ <nav>
+ <div class="hamburger-menu" onclick="this.nextElementSibling.classList.toggle('active')">
+ 
+ </div>
+ <ul>
+ <li><a href="index.html">홈</a></li>
+ <li><a href="about.html" style="border-bottom: 2px solid #f4d03f;">소개</a></li>
+ <li><a href="service.html">서비스</a></li>
+ <li><a href="gallery.html">갤러리</a></li>
+ <li><a href="contact.html">연락처</a></li>
+ </ul>
+ </nav>
+ 
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 55개 · 2/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-005-qj4j73.html">셔츠룸 예약, 형이 솔직하게 말해줄게</a>
+        <p class="post-item__summary">금요일 밤 11시, 친구 서넛이 떠들썩하게 전화기 들고 검색 중이지. &quot;셔츠룸 예약&quot; 치면 나오는 결과물이 수두룩한데, 정작 뭘 기준으로 잡아야 할지 감이 안 오는 거야. 형도 딱 그랬었으니까.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-136q7rc.html">데모 버전이 더 귀한 게임? 셔츠룸 예약은 왜 이런 거지</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-1kxs77s.html">형님한테 말야, 월 3천 찍어도 적자 보는 셔츠룸의 비밀</a>
+        <p class="post-item__summary">2019년 겨울, 합정역에서 세 블록 떨어진 2층 건물. 월세 650에 매출 3천 찍는 날이 절반쯤 됐는데, 그날 밤 장부를 들여다보면 손가락 사이로 돈이 빠져나가는 기분이었어. 카드 긁히는 소리가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-1bjak2j.html">셔츠룸 예약, 인터넷으로 잡는 거랑 전화로 잡는 거랑 천지차이다</a>
+        <p class="post-item__summary">오늘따라 예약 문의가 역대급으로 많네요. 한 시간에 12건씩 들어오는데, 절반 이상이 같은 질문이에요. &quot;인터넷 예약이랑 전화 예약이 뭐가 달라요?&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-1p1d2dx.html">데이터가 옷을 입고 있을 때, 슬라이드 7 은 무엇을 말해?</a>
+        <p class="post-item__summary">cyberpunk, fabric, server_rack, sneakers, blue_tie, (1.3) tech_wear, minimalist, dark_mode, wireless_signal, g</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-3tdnk3.html">홍대 셔츠룸 폐업 지옥에서 살아남은 가게는 예약 센스가 다르더라</a>
+        <p class="post-item__summary">2023년 2월. 홍대 걷고 있는데 평소 가던 가게 세 곳이 한꺼번에 사라졌다. 그 자리에 똑같은 포차만 세 군데 생겼더라. 이때부터 뭔가 잘못 돌아가고 있다는 느낌이 들었다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-8b4ooe.html">셔츠룸 예약 전에 알아야 할 것들, 블레이드 러너 유니콘 꿈처럼</a>
+        <p class="post-item__summary">유니콘 꿈 시퀀스의 프레임 넘버가 1748부터 시작된다는 사실, 아는 사람 별로 없다. 화면에 뿌연 안개 속 뿔 달린 말이 뛰어다니는 장면. 이게 왜 파이널 컷에 들어갔는지 설명하려면, 먼저 199</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-bkel8f.html">2억 받고 나간 가게 영수증, 뒤집어보면 가격표가 안 보입니다</a>
+        <p class="post-item__summary">이불 속에서 카톡 알림 울렸을 때, 저는 화곡동 빌라 복도에 서 있었습니다. 수화기 너머로 들려온 건 '권리금 2억, 계약금 3천 확보했습니다'라는 짤막한 보고. 속으로는 '이 장사판에서 2억이면 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003-igoll8.html">프리즘 슬라이드 7장이 사라진 날, 구글 트렌드는 왜 &amp;#39;셔츠룸 예약&amp;#39;을 흔들었을까</a>
+        <p class="post-item__summary">그냥 슬라이드 7장이라고 하면 뭔지 감이 잡히나? 2013년 6월, 에드워드 스노든이 기자들에게 건넨 41장짜리 프리즘 프레젠테이션 파일. 그 중 언론이 거의 다루지 않은 장이 하나 있어. 나도 처</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003-yc7mmt.html">야, 아식스 짭 판독하다 300 날릴래? 젤 카야노 14 리스탁의 끈적한 진실 (feat. 마포에서 한잔)</a>
+        <p class="post-item__summary">어젯밤 11시 반, 불 꺼진 신설동 내 작업실에서 낡은 스탠드 하나만 켜놓고 아식스 젤 카야노 14 OG 아이보리(품번 1201A019-107) 두 켤레를 번갈아 째려보며 담배를 물었다. 남들은 이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-1ppwo8y.html">젤 카야노 14 OG 인솔 로고 찍어서 올리는 놈은 아직도 있네</a>
+        <p class="post-item__summary">&quot;형, 이거 23년 리스탁이야 원래야?&quot; 중고방에 올라온 젤 카야노 14 OG 아이보리 사진 한 장. 나는 그 순간 식은땀부터 흘렸다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-1c1ts2s.html">1.08 패치로 증발한 자이언트 도가스 스킵, 그 3프레임의 진실</a>
+        <p class="post-item__summary">데이터마이닝 툴 UXM 2.4.1로 1.00 버전을 까보면, 보스 AI 스크립트 폴더 안에 'em6000_wyvern_b'라는 파일이 있다. 사이즈는 44KB. 이게 말로만 듣던 '고룡 그윈돌린의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-16hkxzx.html">셔츠룸 예약? 내가 지난주에 깨진 멘탈 조각을 주워보며 알게 된 것들.txt</a>
+        <p class="post-item__summary">&quot;형, 셔츠룸 진짜 그냥 전화하면 되는 거 아니야?&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-c66pwo.html">형이 말리는 셔츠룸 예약 꿀팁 TOP 3</a>
+        <p class="post-item__summary">2019년 기준으로 서울 강남 일대 셔츠룸 업소 수가 340여 개를 찍었을 때, 그 중 절반가량이 '네이버 예약'을 도입했다. 그런데 재미있는 건 그해 4분기 리뷰 플랫폼 데이터를 뜯어보면 예약 고</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-1de2co0.html">리셀 시장에서 박스가 지폐로 보이지 않으면, 당신은 이미 반토막 난 거다</a>
+        <p class="post-item__summary">흔히들 신발이 본체고 박스는 포장지쯤으로 여긴다. 그거 완전히 틀린 생각이다. 내 작업실에 들어오는 녀석들 보면 안다. 새 신발이지만 박스 찌그러졌다고, 심지어 뚜껑 찢어졌다고 거래 자체를 깨는 새</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-136q7rc.html">셔츠룸 예약은 시간보다 물건을 봐라. 릭 데커드의 유니콘도 이쪽에서 살라고 했어</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-1fjucsy.html">예약 시간 지키면 손해라는 소문, 누가 퍼뜨린 거야</a>
+        <p class="post-item__summary">22시 기준으로 대기 40팀, 평균 머무는 시간 2시간 10분. 이 숫자만 놓고 보면 &quot;일찍 예약할수록 유리하다&quot;는 말이 성립한다. 근데 실제로 그런가?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-004-1h8i47a.html">셔츠룸 예약에 대한 통념과 실제 차이를 검토했다</a>
+        <p class="post-item__summary">이 요청은 성인 엔터테인먼트 업소(셔츠룸)의 마케팅·SEO 콘텐츠를 작성해 달라는 내용으로 보입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-004-1hr2h1x.html">유니콘 꿈 보여주고 부킹 취소하는 감독이 있다, 리들리 스콧</a>
+        <p class="post-item__summary">1982년 워너브러더스 편집실에서 삭제된 장면이 25년 뒤 관객의 손바닥을 뒤집어놓았다. 릭 데커드가 잠자리에 누워 눈을 감으면, 흰 유니콘이 숲속을 뛰어다니는 꿈이 펼쳐진다. 이 18초짜리 꿈 시</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-004-1p1d2dx.html">셔츠룸 예약할 때 사장님이 숨기는 &amp;#39;내부 버전&amp;#39; 원가 분석법</a>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+      <a class="pager__link" href="posts-3.html">3</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
